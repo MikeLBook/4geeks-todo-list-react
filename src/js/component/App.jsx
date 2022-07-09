@@ -3,7 +3,8 @@ import ListInput from './ListInput.jsx'
 import ListItem from './ListItem.jsx'
 
 const App = () => {
-	const [toDoList, setToDoList] = useState([]) // array of strings
+	// array of strings
+	const [toDoList, setToDoList] = useState([]) 
 
 	// takes in a string as an argument
 	// adds the string to the toDoList

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 const ListInput = (props) => {
-    const [inputValue, setInputValue] = useState('') //string
+    const [inputValue, setInputValue] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -23,7 +23,11 @@ const ListInput = (props) => {
                     onChange={e => setInputValue(e.target.value)}
                     value={inputValue}
                 />
-                <input type='submit' value="Add List Item"/>
+                <input 
+                    type='submit'
+                    className="btn btn-success" 
+                    value='Add To Do'
+                />
             </div>
         </form>
     )
