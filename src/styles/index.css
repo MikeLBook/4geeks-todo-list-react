@@ -1,12 +1,31 @@
+body {
+    background-color: #333;
+}
 
-/* 
+ul {
+    border: 0 !important;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.title {
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem;
+}
 
-*/
+.my-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.list-items {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.list-item {
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    margin-top: 8px;
+}
