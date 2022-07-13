@@ -6,17 +6,18 @@ const ListItem = (props) => {
     return (
         <li 
             className="d-flex justify-content-between align-items-center list-item"
+            style={props.listItem.done ? {backgroundColor: 'lightgrey'} : {}}
             onMouseEnter={() => setShowDelete(true)}
             onMouseLeave={() => setShowDelete(false)}
         >
-            <span>{props.listItem}</span>
+            <span style={props.listItem.done ? {textDecoration: 'line-through'} : {}}>{props.listItem.label}</span>
             {showDelete && 
                 <button 
                     type="button" 
-                    className="btn btn-danger" 
-                    onClick={() => props.removeItem(props.index)}
+                    className={props.listItem.done ? "btn btn-warning" : "btn btn-danger"}
+                    onClick={() => props.toggleDone(props.index)}
                 >
-                    Delete
+                    {props.listItem.done ? 'Mark Incomplete' : 'Mark Complete'}
                 </button>
             }
         </li>
